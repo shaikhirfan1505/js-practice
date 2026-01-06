@@ -1,0 +1,9 @@
+:root{
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,  /* deep blue-black */
+        #1e1b4b,  /* indigo */
+        #020617   /* near black */
+    )
+}

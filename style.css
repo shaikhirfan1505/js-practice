@@ -54,13 +54,16 @@ body{
 }
 
 #blue{
-    color: rgb(1, 1, 87);
+    background-color: rgb(1, 1, 87);
+    color: white;
 }
 
 #red{
-    color:red;
+    background-color:red;
+    color: white;
 }
 
 #green{
-    color: green;
+    background-color: green;
+    color: white;
 }

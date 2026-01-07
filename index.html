@@ -1,5 +1,122 @@
-<!-- background: linear-gradient(
-        135deg,
-        #0f172a,  /* deep blue-black */
-        #1e1b4b,  /* indigo */
-        #020617   /* near black */ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Structured Box Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, sans-serif;
+      color: white;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Main outer box */
+    .main-box {
+      width: 1300px;
+      height: 650px;
+      border: 2px solid white;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+      display: flex;
+      overflow: hidden;
+      background: #111; /* optional, makes inner boxes stand out */
+    }
+
+    /* Left and Right panels */
+    .left-panel, .right-panel {
+      border: 2px solid white;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      background: #1a1a1a;
+    }
+
+    .left-panel {
+      flex: 0 0 65%;
+      gap: 15px; /* space between top and bottom box */
+    }
+
+    .right-panel {
+      flex: 0 0 35%;
+    }
+
+    /* Top and Bottom box in left panel */
+    .top-box, .bottom-box {
+      border: 2px solid white;
+      border-radius: 8px;
+      padding: 10px;
+      background: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .top-box {
+      flex: 0 0 10%; /* 10% height of left-panel */
+      gap: 20px;
+    }
+
+    .bottom-box {
+      flex: 1; /* fills the remaining space */
+      flex-direction: column;
+    }
+
+    /* Inner boxes inside top-box */
+    .top-box .inner-box {
+      width: 100px;
+      height: 40px;
+      border: 2px solid white;
+      border-radius: 6px;
+      background: #333;
+      text-align: center;
+    }
+
+    /* Inner boxes inside bottom box (example) */
+    .bottom-box .inner-box {
+      flex: 1;
+      margin: 10px 0;
+      border: 2px solid white;
+      border-radius: 6px;
+      background: #333;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="main-box">
+    <!-- Left panel -->
+    <div class="left-panel">
+      <!-- Top small box (10% height) with 3 inner boxes -->
+      <div class="top-box">
+        <div class="inner-box">select</div>
+        <div class="inner-box">clear</div>
+        <div class="inner-box">download</div>
+      </div>
+      <!-- Bottom box fills remaining space -->
+      <div class="bottom-box">
+
+      </div>
+    </div>
+
+    <!-- Right panel -->
+    <div class="right-panel">
+      <!-- Example content (can add more boxes) -->
+      <div class="inner-box" style="flex:1; margin:10px 0;"></div>
+      <div class="inner-box" style="flex:1; margin:10px 0;"></div>
+    </div>
+  </div>
+
+</body>
+</html>

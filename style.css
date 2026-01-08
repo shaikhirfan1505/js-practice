@@ -28,6 +28,9 @@ body{
     height: 96%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+
+    
 }
 
 .right-box{
@@ -43,6 +46,18 @@ body{
     display: flex;
     gap: 40px;
     margin: 10px;
+    justify-content: center;
+}
+.bottom {
+    margin-top: auto;           /* pushes bottom to bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30%;
+}
+
+#image-icon{
+        font-size: 150px;
 }
 
 .buttons{
